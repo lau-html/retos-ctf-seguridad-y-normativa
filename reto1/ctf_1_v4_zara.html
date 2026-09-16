@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JERSEY PUNTO OVERSIZE</title>
+    <style>
+        /* fondo base */
+        body {
+            font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 16.003px;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* MENÚS LATERALES */
+        .menu-izq {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 100;
+        }
+        .linea-menu {
+            width: 30px;
+            height: 1px;
+            background-color: #000;
+            margin-bottom: 8px;
+        }
+
+        .menu-der {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            text-align: right;
+            text-transform: uppercase;
+            z-index: 100;
+        }
+        .menu-der p {
+            margin: 0 0 10px 0;
+            cursor: pointer;
+        }
+        .menu-der .separador {
+            margin-top: 60px;
+        }
+
+        /* CONTENEDOR SCROLL */
+        .contenedor-scroll {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 80px; 
+            padding-bottom: 100px;
+        }
+
+        /* PTE 1: FOTO A LA IZQUIERDA Y TEXTO A LA DCHA (ARRIBA) */
+        .seccion-principal {
+            display: flex;
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            width: 85%;
+            margin: 0 auto 100px auto; 
+            gap: 40px; /* Separación entre foto y texto */
+        }
+
+        .bloque-imagen-1 {
+            width: 55%; 
+        }
+        .bloque-imagen-1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .texto-principal {
+            text-transform: uppercase;
+            width: 30%;
+            margin-top: 0; 
+        }
+        .texto-principal p {
+            margin-top: 0;
+            margin-bottom: 15px; /* Separación entre el título y el precio */
+        }
+
+        /* PTE 2: FOTO A LA DCHA Y TEXTO A LA IZQDA (ABAJO) */
+        .seccion-detalle {
+            display: flex;
+            justify-content: flex-end; 
+            align-items: flex-end; 
+            width: 85%;
+            margin: 0 auto;
+            gap: 50px;
+        }
+
+        .texto-composicion {
+            text-transform: uppercase;
+            width: 250px;
+            text-align: left;
+        }
+
+        .bloque-imagen-2 {
+            width: 60%;
+        }
+        .bloque-imagen-2 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* not the flag */
+        .cebo {
+            color: #ffffff;
+            background-color: #ffffff;
+            user-select: all;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-izq">
+        <div class="linea-menu"></div>
+        <div class="linea-menu"></div>
+    </div>
+
+    <!-- Menu textos (dcha) -->
+    <div class="menu-der">
+        <p style="border-bottom: 1px solid #000; padding-bottom: 2px; display: inline-block;">BUSCAR</p>
+        <div class="separador"></div>
+        <p>CESTA [0]</p>
+        <p>INICIAR SESIÓN</p>
+        <p>AYUDA</p>
+    </div>
+
+    <!-- ZONA SCROLL -->
+    <div class="contenedor-scroll">
+        
+        <!-- SECCIÓN DE ARRIBA: Foto Izquierda / Texto Derecha -->
+        <div class="seccion-principal">
+            <div class="bloque-imagen-1">
+                <img src="jersey_zara.jpg" alt="Detalle del jersey">
+            </div>
+            
+            <div class="texto-principal">
+                <p>JERSEY PUNTO OVERSIZE - EDICIÓN LIMITADA</p>
+                <p>49,95 EUR</p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE ABAJO: Foto Derecha / Texto Izquierda -->
+        <!-- flag{el_diablo_viste_de_html} -->
+        <div class="seccion-detalle">
+            
+            <div class="texto-composicion">
+                <p>
+                    EXTERIOR<br>
+                    TEJIDO PRINCIPAL<br>
+                    80% viscosa<br>
+                    20% poliamida<br><br>
+                    TEJIDO SECUNDARIO<br>
+                    100% poliamida
+                </p>
+                
+                <!-- Bandera falsa en blanco justo debajo de la composicion del articulo -->
+                <p class="cebo">flag{demasiado_facil_para_ser_verdad}</p>
+            </div>
+
+            <div class="bloque-imagen-2">
+                <img src="jersey_zara_2.jpg" alt="Modelo jersey rayas">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
