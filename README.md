@@ -1,4 +1,6 @@
-Aquí incluyo 2 versiones del primer reto del ctf: 
+RETO 1
+
+De momento aquí incluyo 2 versiones del primer reto del ctf: 
 
 Versión 1) 
 *Welcome to Nginx:*
